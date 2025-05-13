@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="shop.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="sort">
+    <select id="catSelect">
+        <option>Alle</option>
+        <option>Electronica</option>
+        <option>Sport</option>
+        <option>Home</option>
+        <option>Fashion</option>
+    </select>
+    <select id="sortSelect">
+        <option>Niet sorteren</option>
+        <option>Prijs (hoog - laag)</option>
+        <option>Prijs (laag - hoog)</option>
+        <option>A - Z</option>
+        <option>Z - A</option>
+    </select>
+    <label for="stock">op voorraad:</label>
+    <input type="checkbox" name="stock" id="stockButton">
+    <button id="clearFilters">wis filters</button>
+    <br>
+    <button id="totalValButton">(dev) toon totale waarde</button>
+    <button onclick="localStorage.clear(); location.reload()">Verwijder local storage</button>
+    <input id="searchName" type="text" placeholder="zoek op naam...">
+    </div>
+    <section class="product-list">
+        <!-- Producten uit de array worden hier getoond via JS -->
+    </section>
+
+    <section class="cart">
+        <h2>Winkelwagen</h2>
+        <ul id="cart-items">
+            <!-- Winkelwagenitems worden hier getoond -->
+        </ul>
+        <button id="emptyCart">Leeg winkelwagen</button>
+        <p>Totaal: €<span id="cart-total"></span></p>
+    </section>
+</body>
+
+</html>
